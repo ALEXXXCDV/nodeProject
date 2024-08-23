@@ -1,10 +1,12 @@
 import express from "express";
 
+require('dotenv').config();
+
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 
 app.get('/', (req, res) =>{
-    res.send('Hola mundo, el servidor está en el puerto 3000.');
+    res.send('Hola mundo, soy ALEJANDRO C.');
 });
 
 app.listen(port, () =>{
